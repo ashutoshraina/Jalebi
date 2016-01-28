@@ -86,6 +86,7 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Domain\Stage.cs" />
     <Compile Include="Timing.cs" />

@@ -43,6 +43,11 @@
             catch (Exception exception)
             {
                 WriteToConsoleWithColor("Error : " + exception.Message, ConsoleColor.Red);
+                if(exception.InnerException != null && exception.InnerException.Message != null)
+                {
+                    WriteToConsoleWithColor("Error : " + exception.InnerException.Message, ConsoleColor.Red);
+                }
+                WriteToConsoleWithColor("There was likely an error in connecting to Go", ConsoleColor.Red);
             }
             ReadKey();
         }
